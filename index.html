@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>名刺ビルダー Offline Local Edition</title>
+  <style>
+    :root{--ink:#1a1410;--paper:#fffaf0;--line:#d9c9a8;--accent:#c23b22;}
+    *{box-sizing:border-box}
+    body{margin:0;background:#f4ecd9;color:var(--ink);font-family:"Yu Gothic","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;line-height:1.75}
+    main{max-width:920px;margin:0 auto;padding:56px 20px 72px}
+    .mark{display:inline-grid;place-items:center;width:52px;height:52px;background:var(--accent);color:#fff;font-weight:800;font-size:28px;transform:rotate(-4deg);margin-bottom:18px}
+    h1{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(32px,7vw,64px);line-height:1.05;margin:0 0 18px}
+    p{font-size:17px;margin:0 0 18px}
+    .lead{font-size:20px;max-width:720px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0}
+    a.button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:10px 18px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);text-decoration:none;font-weight:700;letter-spacing:.04em}
+    a.button.secondary{background:transparent;color:var(--ink)}
+    section{border-top:1px solid var(--line);padding-top:24px;margin-top:32px}
+    h2{font-size:22px;margin:0 0 10px;font-family:"Yu Mincho","Hiragino Mincho ProN",serif}
+    ul{padding-left:1.2em;margin:0}
+    code{background:#fff6e3;padding:2px 5px;border:1px solid var(--line)}
+  </style>
+</head>
+<body>
+  <main>
+    <div class="mark">名</div>
+    <h1>名刺ビルダー</h1>
+    <p class="lead">ブラウザだけで名刺を作れる、ローカル利用向けのオフライン版です。氏名、住所、画像、下書きデータはサーバーに送信されません。</p>
+    <div class="actions">
+      <a class="button" href="downloads/meishi-builder-offline.zip" download>オフライン版をダウンロード</a>
+      <a class="button secondary" href="#privacy">データの扱いを見る</a>
+    </div>
+
+    <section>
+      <h2>使い方</h2>
+      <ul>
+        <li>ZIPをダウンロードして展開します。</li>
+        <li><code>index.html</code> をブラウザで開きます。</li>
+        <li>名刺情報を入力し、PDF/PNG/vCardを書き出します。</li>
+      </ul>
+    </section>
+
+    <section id="privacy">
+      <h2>ローカル保存</h2>
+      <p>この配布形式では、アプリ本体をユーザーのPC上で開いて使います。下書きはブラウザ内の IndexedDB に保存され、JSON保存を使えばユーザー自身のPCにバックアップできます。</p>
+      <p>GitHub Pages はダウンロードページとして使い、名刺データを預かりません。</p>
+    </section>
+  </main>
+</body>
+</html>
